@@ -1,11 +1,72 @@
 import SwiftUI
 
+class ApplicationState: ObservableObject {
+    @Published var loggedIn = false
+}
+
 
 struct ContentView: View {
-	@State var harv_predictions: [Prediction] = []
-    @State var blan_predictions: [Prediction] = []
-	
+    @StateObject var applicationState: ApplicationState = ApplicationState()
     var body: some View {
+        if(!applicationState.loggedIn) {
+            AuthView().environmentObject(applicationState)
+        }
+        else{
+            MBTAView()
+        }
+    }
+    
+}
+
+struct AuthView: View {
+    @EnvironmentObject var applicationState: ApplicationState
+    var body: some View {
+        List{
+            Text("Login Screen")
+            Section{}
+            Button("LOG ME IN"){
+                applicationState.loggedIn = true
+            }
+        }
+    }
+}
+
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+
+struct SomeView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Navigation Link Below:")
+                NavigationLink(destination: SecondView()) {
+                    Text("Navigate Here")
+                        .foregroundColor(.black)
+                        .font(.system(size:30))
+                        .fontWeight(.bold)
+                }
+            }.navigationBarTitle("Page One")
+        }
+    }
+}
+
+struct SecondView: View {
+    var body: some View {
+        Text("Now on the second view.")
+    }
+}
+
+
+struct MBTAView: View{
+    @State var harv_predictions: [Prediction] = []
+    @State var blan_predictions: [Prediction] = []
+    var body: some View{
         NavigationView{
             List {
                 Section("Harvard Departure Times", content: {
@@ -27,19 +88,14 @@ struct ContentView: View {
                 Button("Refresh Data"){
                     harv_predictions = harv_Predictions() ?? []
                     blan_predictions = blan_Predictions() ?? []
+                    
                 }
                 
             }.onAppear {
                 harv_predictions = harv_Predictions() ?? []
                 blan_predictions = blan_Predictions() ?? []
+            }
+            .navigationBarTitle("MBTA Train Info")
         }
-        .navigationBarTitle("MBTA Train Info")
-    }
-  }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
