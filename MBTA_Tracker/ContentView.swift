@@ -1,7 +1,7 @@
 import SwiftUI
 
 class ApplicationState: ObservableObject {
-    @Published var loggedIn = false
+    @Published var loggedIn = true
 }
 
 
@@ -21,8 +21,10 @@ struct ContentView: View {
 struct AuthView: View {
     @EnvironmentObject var applicationState: ApplicationState
     var body: some View {
-        List{
-            Text("Login Screen")
+        List {
+            Section{}
+            Section{}
+            Text("MBTA Sign In")
             Section{}
             Button("Log In"){
                 applicationState.loggedIn = true

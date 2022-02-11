@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B544F4BE27B6F20C00DCB365 /* AppleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544F4BD27B6F20C00DCB365 /* AppleHandler.swift */; };
 		B58F7CED27B49A4E00F825AE /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F7CEC27B49A4E00F825AE /* APIRequester.swift */; };
 		B5F0E51F27B44F80006BDA7F /* MBTA_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0E51E27B44F80006BDA7F /* MBTA_TrackerApp.swift */; };
 		B5F0E52127B44F80006BDA7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0E52027B44F80006BDA7F /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B544F4BD27B6F20C00DCB365 /* AppleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleHandler.swift; sourceTree = "<group>"; };
 		B58F7CEC27B49A4E00F825AE /* APIRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequester.swift; sourceTree = "<group>"; };
 		B5F0E51B27B44F80006BDA7F /* MBTA_Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTA_Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F0E51E27B44F80006BDA7F /* MBTA_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTA_TrackerApp.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				B5F0E51E27B44F80006BDA7F /* MBTA_TrackerApp.swift */,
 				B5F0E52027B44F80006BDA7F /* ContentView.swift */,
 				B58F7CEC27B49A4E00F825AE /* APIRequester.swift */,
+				B544F4BD27B6F20C00DCB365 /* AppleHandler.swift */,
 				B5F0E52227B44F81006BDA7F /* Assets.xcassets */,
 				B5F0E52427B44F81006BDA7F /* Preview Content */,
 			);
@@ -86,6 +89,8 @@
 			dependencies = (
 			);
 			name = MBTA_Tracker;
+			packageProductDependencies = (
+			);
 			productName = MBTA_Tracker;
 			productReference = B5F0E51B27B44F80006BDA7F /* MBTA_Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,8 @@
 				Base,
 			);
 			mainGroup = B5F0E51227B44F80006BDA7F;
+			packageReferences = (
+			);
 			productRefGroup = B5F0E51C27B44F80006BDA7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F0E52127B44F80006BDA7F /* ContentView.swift in Sources */,
+				B544F4BE27B6F20C00DCB365 /* AppleHandler.swift in Sources */,
 				B58F7CED27B49A4E00F825AE /* APIRequester.swift in Sources */,
 				B5F0E51F27B44F80006BDA7F /* MBTA_TrackerApp.swift in Sources */,
 			);
@@ -272,7 +280,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MBTA_Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RTMBRPDLH2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -301,7 +309,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MBTA_Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RTMBRPDLH2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
