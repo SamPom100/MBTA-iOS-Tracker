@@ -12,7 +12,7 @@ struct ContentView: View {
             AuthView().environmentObject(applicationState)
         }
         else{
-            MBTAView()
+            MBTAView().environmentObject(applicationState)
         }
     }
     
@@ -24,7 +24,7 @@ struct AuthView: View {
         List{
             Text("Login Screen")
             Section{}
-            Button("LOG ME IN"){
+            Button("Log In"){
                 applicationState.loggedIn = true
             }
         }
@@ -66,6 +66,7 @@ struct SecondView: View {
 struct MBTAView: View{
     @State var harv_predictions: [Prediction] = []
     @State var blan_predictions: [Prediction] = []
+    @EnvironmentObject var applicationState: ApplicationState
     var body: some View{
         NavigationView{
             List {
@@ -89,6 +90,12 @@ struct MBTAView: View{
                     harv_predictions = harv_Predictions() ?? []
                     blan_predictions = blan_Predictions() ?? []
                     
+                }
+                
+                Section{}
+                
+                Button("Log Out"){
+                    applicationState.loggedIn = false
                 }
                 
             }.onAppear {
