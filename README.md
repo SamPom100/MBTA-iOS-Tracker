@@ -1,6 +1,11 @@
 # MBTA-iOS-Tracker
  Track B Line Trains in an iOS App made in Swift
 
-![IMG_6471](https://user-images.githubusercontent.com/28206070/153336438-bbe49410-6dfe-43d8-8cfb-dc81d085a5f1.PNG)
 
-![Simulator Screen Shot - iPhone 11 - 2022-02-09 at 23 18 03](https://user-images.githubusercontent.com/28206070/153336442-88da9532-a7fc-4578-bd04-b63e994d99c6.png)
+## App Homescreen
+![Simulator Screen Shot - iPhone 11 - 2022-02-15 at 22 35 39](https://user-images.githubusercontent.com/28206070/154198510-a8eee1e4-1138-40af-89e8-3d63dc03a3c2.png)
+
+
+
+## Sign In Screen
+![Simulator Screen Shot - iPhone 11 - 2022-02-15 at 22 33 09](https://user-images.githubusercontent.com/28206070/154198482-ac37d1fb-38e3-4db5-bac6-cfd3c351b80d.png)
